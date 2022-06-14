@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface UserService{
 
+    String getAll();
+
     String get(List<Integer> ids);
 
     String add(List<Integer> ids);

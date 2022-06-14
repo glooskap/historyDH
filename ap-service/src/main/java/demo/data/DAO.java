@@ -2,14 +2,16 @@ package demo.data;
 
 import java.util.List;
 
-public interface DAO {
+public interface DAO<T> {
 
-    String select(List<Integer> ids);
+    List<T> selectAll();
 
-    String create(List<Integer> ids);
+    List<T> select(List<Integer> ids);
 
-    String update(List<Integer> ids);
+    List<T> create(List<Integer> ids);
 
-    String delete(List<Integer> ids);
+    List<T> update(List<Integer> ids);
+
+    List<T> delete(List<Integer> ids);
 
 }
